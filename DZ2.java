@@ -10,12 +10,12 @@ public class DZ2 {
         Scanner iScanner = new Scanner(System.in);
         System.out.printf("Введите число n от 1 до 1000: ");
         Integer x = iScanner.nextInt();
-        String rez = x.toString(x) + " = " ;
+        String rez = "Все простые числа от 2 до " + x.toString(x) + " : " ;
         int i = 2;
         while (i <= x) {
-            if (isPrime(i) == true && x%i ==0){
-                rez = new StringBuilder(rez).append(i).append("*").toString();
-                x /=i;
+            if (isPrime(i) == true ){
+                rez = new StringBuilder(rez).append(i).append(",").toString();
+                i += 1;
             }
             else i += 1;
         }
